@@ -1,0 +1,40 @@
+ <!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="mystyle.css">
+  <title>Dataviz</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<ul class=navbar>
+  <li class=active><a class=navtext href="./">Overview</a></li>
+  <li class=navbutton><a class=navtext href="tuition-timeline">Tuition Timeline</a></li>
+  <li class=navbutton><a class=navtext href="student-services-fee">Student Services Fee</a></li>
+  <li class=navbutton><a class=navtext href="campus-based-fees">Campus-Based Fees</a></li>
+</ul>
+
+<div class="flex-container">
+  <div class = "chart">
+    <canvas id="resident-undergrad"></canvas>
+    <script src="charts/resident-undergrad.js"></script>
+  </div>
+  <div class = "chart">
+    <canvas id="nonresident-undergrad"></canvas>
+    <script src="charts/nonresident-undergrad.js"></script>
+  </div>
+  <div class = "chart">
+    <canvas id="resident-grad"></canvas>
+    <script src="charts/resident-grad.js"></script>
+  </div>
+  <div class = "chart">
+    <canvas id="nonresident-grad"></canvas>
+    <script src="charts/nonresident-grad.js"></script>
+  </div>
+</div>
+
+</body>
+</html> 
+<!DOCTYPE html>

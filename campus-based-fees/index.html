@@ -1,0 +1,44 @@
+ <!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../mystyle.css">
+  <title>Dataviz</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<ul class=navbar>
+  <li class=navbutton><a class=navtext href="../">Overview</a></li>
+  <li class=navbutton><a class=navtext href="../tuition-timeline">Tuition Timeline</a></li>
+  <li class=navbutton><a class=navtext href="../student-services-fee">Student Services Fee</a></li>
+  <li class=active><a class=navtext href="../campus-based-fees">Campus-Based Fees</a></li>
+</ul>
+
+<div class = "left-half">
+  <canvas id="campus-based"></canvas>
+  <script src="campus-based-fees.js"></script>
+</div>
+<div class = "right-half">
+        <h3><span>$306.00</span> Lower Sproul Plaza Fee</h3>
+  <h3><span>$212.75</span> Wellness Fee</h3>
+  <h3><span>$92.75</span> Campus Health Care Fee</h3>
+  <h3><span>$46.00</span> Life Safety Fee</h3>
+  <h3><span>$34.00</span> Associated Students of University of California (ASUC) Fee</h3>
+  <h3><span>$33.00</span> Campus Climate & Equity (Big C) Fee</h3>
+  <h3><span>$28.75</span> Recruitment and Retention (STARR) Fee</h3>
+  <h3><span>$20.75</span> Educational Opportunity & Equity (GOLD) Fee</h3>
+  <h3><span>$17.25</span> Student Basic Needs Fee</h3>
+  <h3><span>$10.00</span> The Green Initiative Fund (TGIF) Fee</h3>
+  <h3><span>$6.00</span> Student Center Fee</h3>
+  <h3><span>$6.00</span> Save the Daily Cal Initiative (V.O.I.C.E.) Fee</h3>
+  <h3><span>$4.50</span> Housing Security Fee</h3>
+  <h3><span>$2.25</span> Ethnic Studies Fee</h3>
+
+  <p>Data from the <a href = "https://registrar.berkeley.edu/tuition-fees-residency/tuition-fees/">Office of the Registrar</a></p>
+</div>
+
+</body>
+</html> 
+<!DOCTYPE html>
