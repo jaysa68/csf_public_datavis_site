@@ -33,10 +33,11 @@ new Chart(resUGChart, {
     }]
   },
   options: {
+    maintainAspectRatio: false,
     plugins: {
       title: {
-	display: true,
-	text: 'Resident Undergraduate Student'
+	      display: true,
+	      text: 'Resident Undergraduate Student'
       },
       legend: {
         display: false

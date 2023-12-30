@@ -36,8 +36,8 @@ new Chart(nonresUGChart, {
   options: {
     plugins: {
       title: {
-	display: true,
-	text: 'Nonresident Undergraduate Student'
+	      display: true,
+	      text: 'Nonresident Undergraduate Student'
       },
       legend: {
         display: false

@@ -36,8 +36,8 @@ new Chart(nonresGChart, {
   options: {
     plugins: {
       title: {
-	display: true,
-	text: 'Nonresident Graduate Student'
+	      display: true,
+	      text: 'Nonresident Graduate Student'
       },
       legend: {
         display: false
