@@ -7,13 +7,13 @@ html, body {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   background-color: #f7f6f5;
+  font-family: "ReadexPro";
 }
 
 .header {
   color: #1D1F25;
   font-size: 50%;
   margin-left: 0px;
-  font-family: "ReadexPro";
 } 
 
 ul {
@@ -31,7 +31,6 @@ li {
 }
 
 li a {
-  font-family: "ReadexPro";
   color: #1D1F25;
   display: block;
   text-align: center;
@@ -50,13 +49,11 @@ li.active {
 
 h3 {
   font-size: 100%;
-  font-family: "ReadexPro";
   white-space: nowrap; /* Prevent line breaks */
 }
 
 p {
   font-size: 100%;
-  font-family: "ReadexPro";
 }
 
 span {
@@ -78,4 +75,14 @@ span {
 .half-chart {
   width: 45%;
   height: auto;
+}
+
+.tab {
+  border: 1px solid #e7e7e7;
+}
+
+.half-container {
+  float: left;
+  width: 46%;
+  padding: 2%;
 }

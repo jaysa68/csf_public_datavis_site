@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="mystyle.css">
   <title>Dataviz</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -16,37 +17,80 @@
   <li class=navbutton><a class=navtext href="campus-based-fees">Campus-Based Fees</a></li>
 </ul>
 
-<p> Charges vary depending on the academic year a student was first enrolled. However, the <a href="https://admission.universityofcalifornia.edu/tuition-financial-aid/tuition-cost-of-attendance/tuition-stability-plan.html">UC Tuition Stability Plan</a> guarantees that Tuition, the Student Services Fee, and undergraduate Nonresident Supplemental Tuition will remain the same until that student graduates.
+<p> Charges vary depending on the academic year a student was first enrolled.
+However, the <a
+href="https://admission.universityofcalifornia.edu/tuition-financial-aid/tuition-cost-of-attendance/tuition-stability-plan.html">UC
+Tuition Stability Plan</a> guarantees that Tuition, the Student Services Fee,
+and undergraduate Nonresident Supplemental Tuition will remain the same until
+that student graduates.
+
 <!-- TODO put word "core fees" in color matching Tuition and SSF in later section -->
 
-<div class="flex-container">
-  <div class = "overview-chart">
-    <canvas id="resident-undergrad"></canvas>
-    <script src="charts/resident-undergrad.js"></script>
-  </div>
-  <div class = "overview-chart">
-    <canvas id="nonresident-undergrad"></canvas>
-    <script src="charts/nonresident-undergrad.js"></script>
-  </div>
-  <div class = "overview-chart">
-    <canvas id="resident-grad"></canvas>
-    <script src="charts/resident-grad.js"></script>
-  </div>
-  <div class = "overview-chart">
-    <canvas id="nonresident-grad"></canvas>
-    <script src="charts/nonresident-grad.js"></script>
-  </div>
+<div class="tab">
+  <button class="tablinks" onclick="display_AY(event, '2024_25')" id="defaultOpen"> 2024-25 </button>
+  <button class="tablinks" onclick="display_AY(event, '2023_24')"> 2023-24 </button>
+  <button class="tablinks" onclick="display_AY(event, '2022_23')"> 2022-23 </button>
+  <button class="tablinks" onclick="display_AY(event, '2021_22')"> 2021-22 or earlier</button>
 </div>
 
+<div id="2024_25" class="tabcontent">
+  <div class="flex-container">
+    <div class = "overview-chart">
+      <canvas id="resident-undergrad"></canvas>
+      <script src="charts/resident-undergrad.js"></script>
+    </div>
+    <div class = "overview-chart">
+      <canvas id="nonresident-undergrad"></canvas>
+      <script src="charts/nonresident-undergrad.js"></script>
+    </div>
+    <div class = "overview-chart">
+      <canvas id="resident-grad"></canvas>
+      <script src="charts/resident-grad.js"></script>
+    </div>
+    <div class = "overview-chart">
+      <canvas id="nonresident-grad"></canvas>
+      <script src="charts/nonresident-grad.js"></script>
+    </div>
+  </div>
+</div>
+<div id="2023_24" class="tabcontent">
+  <p>hello</p>
+</div>
+<div id="2022_23" class="tabcontent">
+  <p>heyyyy</p>
+</div>
+<div id="2021_22" class="tabcontent">
+  <p>babygorl</p>
+</div>
+
+<div class="half-container">
 <h1>Tuition</h1>
-<p> Tuition pays for the core services provided by UC Berkeley to its students. The charge for every tuition type is standardized across all campuses that are part of the UC system.
-<h2>
+
+<p> Tuition pays for the core services provided by UC Berkeley to its students.
+According to Regents Policy 3101, it can be used to cover most costs within the
+university budget. This includes areas such as faculty salaries and benefits,
+instructional costs, libraries, and some student financial aid. The cost of
+tuition is standardized across all campuses that are part of the UC system.</p>
+</div>
+
+<div class="half-container">
 <h1>Student Services Fee (SSF)</h1>
-<p> Like tuition, the SSF is standardized across all UC campuses.
+<p> Like tuition, the SSF is standardized across all UC campuses. However,  </p>
+</div>
+
+<div class="half-container">
 <h1>Campus Fee</h1>
+</div>
+
+<div class="half-container">
 <h1>IREF</h1>
+</div>
+
+<div class="half-container">
 <h1>Class Pass Fee</h1>
+</div>
+
+<script src="scripts/tabs.js"></script>
 
 </body>
 </html> 
-<!DOCTYPE html>
