@@ -86,3 +86,9 @@ span {
   width: 46%;
   padding: 2%;
 }
+
+p.alert {
+  border-left: 6px solid #2196F3;
+  padding: 6px;
+  background-color: #ddffff;
+}
