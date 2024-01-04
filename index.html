@@ -27,21 +27,21 @@
 <p class="alert"> Charges vary depending on the academic year a student was first enrolled.
 However, the <a
 href="https://admission.universityofcalifornia.edu/tuition-financial-aid/tuition-cost-of-attendance/tuition-stability-plan.html">UC
-Tuition Stability Plan</a> guarantees that Tuition, the Student Services Fee,
-and undergraduate Nonresident Supplemental Tuition will remain the same until
+Tuition Stability Plan</a> guarantees that Undergraduate Tuition, the Student Services Fee,
+and Undergraduate Nonresident Supplemental Tuition will remain the same until
 that student graduates. </p>
 
 <!-- TODO put word "core fees" in color matching Tuition and SSF in later section -->
 
 <div class="tab">
-  <button class="tablinks" onclick="display_AY(event, '2024_25')" id="defaultOpen"> 2024-25 </button>
-  <button class="tablinks" onclick="display_AY(event, '2023_24')"> 2023-24 </button>
+  <!--button class="tablinks" onclick="display_AY(event, '2024_25')" > 2024-25 </button-->
+  <button class="tablinks" onclick="display_AY(event, '2023_24')" id="defaultOpen"> 2023-24 </button>
   <button class="tablinks" onclick="display_AY(event, '2022_23')"> 2022-23 </button>
   <button class="tablinks" onclick="display_AY(event, '2021_22')"> 2021-22 or earlier</button>
 </div>
 
-<div id="2024_25" class="tabcontent">
-</div>
+<!--div id="2024_25" class="tabcontent">
+</div-->
 <div id="2023_24" class="tabcontent">
   <div class="flex-container">
     <div class="overview-chart">
@@ -59,10 +59,36 @@ that student graduates. </p>
   </div>
 </div>
 <div id="2022_23" class="tabcontent">
-  <p>heyyyy</p>
+  <div class="flex-container">
+    <div class="overview-chart">
+      <canvas id="2223uResChart"></canvas>
+    </div>
+    <div class="overview-chart">
+      <canvas id="2223uNonresChart"></canvas>
+    </div>
+    <div class = "overview-chart">
+      <canvas id="2223gResChart"></canvas>
+    </div>
+    <div class = "overview-chart">
+      <canvas id="2223gNonresChart"></canvas>
+    </div>
+  </div>
 </div>
 <div id="2021_22" class="tabcontent">
-  <p>babygorl</p>
+  <div class="flex-container">
+    <div class="overview-chart">
+      <canvas id="2122uResChart"></canvas>
+    </div>
+    <div class="overview-chart">
+      <canvas id="2122uNonresChart"></canvas>
+    </div>
+    <div class = "overview-chart">
+      <canvas id="2122gResChart"></canvas>
+    </div>
+    <div class = "overview-chart">
+      <canvas id="2122gNonresChart"></canvas>
+    </div>
+  </div>
 </div>
 
 <div class="half-container">
@@ -111,7 +137,7 @@ amount differs between graduate and undergraduate students. More information on 
 <div class="half-container">
   <h1>Optional Fees</h1>
 
-  <p> Neither of these fees are included in the charts above.
+  <p> These fees are not included in the charts above.
 
   <h2>Berkeley Student Health Insurance Plan (SHIP)</h2>
 
