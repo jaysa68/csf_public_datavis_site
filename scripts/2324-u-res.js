@@ -1,18 +1,21 @@
 google.charts.load('current', {
   'packages': ['corechart', 'bar']
 });
-google.charts.setOnLoadCallback(initChart);
+google.charts.setOnLoadCallback(initCharts);
 
-function initChart() {
-  URL = "https://docs.google.com/spreadsheets/d/1kccrFJIMqa07EfZEFPi4obVsTSS6wp-UuKxbihcfwvc/edit?usp=sharing";
-  var query = new google.visualization.Query(URL);
+function initCharts() {
+  createChart("2324uResChart", "https://docs.google.com/spreadsheets/d/1kccrFJIMqa07EfZEFPi4obVsTSS6wp-UuKxbihcfwvc/edit?usp=sharing");
+}
+
+function createChart(containerId, dataUrl) {
+  var query = new google.visualization.Query(dataUrl);
   query.setQuery('select *');
   query.send(function(response) {
-    handleQueryResponse(response);
+    handleQueryResponse(response, containerId);
   });
 }
 
-function handleQueryResponse(response) {
+function handleQueryResponse(response, containerId) {
   var data = response.getDataTable();
   var columns = data.getNumberOfColumns();
   var rows = data.getNumberOfRows();
@@ -57,7 +60,7 @@ function handleQueryResponse(response) {
     labels: labels,
     datasets: datasets
   };
-  var canvas = document.getElementById("2324uResChart");
+  var canvas = document.getElementById(containerId);
   var setup = {
     type: 'doughnut',
     data: chartdata,
