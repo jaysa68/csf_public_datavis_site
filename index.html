@@ -4,9 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="mystyle.css">
+  <!-- title in tab bar-->
   <title>Dataviz</title>
+  <!-- icon in tab bar-->
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <!-- chart.js library-->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- script to pull data from google sheets-->
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 <body>
 
@@ -54,7 +59,20 @@ that student graduates. </p>
   </div>
 </div>
 <div id="2023_24" class="tabcontent">
-  <p>hello</p>
+  <div class="flex-container">
+    <div class="overview-chart">
+      <script src="scripts/2324-u-res.js"></script>
+      <canvas id="2324uResChart"></canvas>
+    </div>
+    <!--div class = "overview-chart">
+      <script src="scripts/2324-g-res.js"></script>
+      <canvas id="2324gResChart"></canvas>
+    </div>
+    <div class = "overview-chart">
+      <script src="scripts/2324-g-nonres.js"></script>
+      <canvas id="2324gNonresChart"></canvas>
+    </div-->
+  </div>
 </div>
 <div id="2022_23" class="tabcontent">
   <p>heyyyy</p>
