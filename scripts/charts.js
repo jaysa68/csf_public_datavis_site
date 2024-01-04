@@ -3,8 +3,33 @@ google.charts.load('current', {
 });
 google.charts.setOnLoadCallback(initCharts);
 
+const doughnutLabel = {
+  id: 'doughnutLabel',
+  beforeDatasetsDraw(chart, args, pluginOptions) {
+    const {ctx, data} = chart;
+
+    ctx.save();
+    const xCoor = chart.getDatasetMeta(0).data[0].x;
+    const yCoor = chart.getDatasetMeta(0).data[0].y;
+    
+    let theSum = 0;
+    for (var i = 0; i < data.datasets[0].data.length; i++)
+      theSum += data.datasets[0].data[i];
+    let finalString = Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(theSum);
+
+    ctx.font = 'bold 28px sans-serif';
+    ctx.fillStyle = 'rgba(54, 162, 235, 1)';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(finalString, xCoor, yCoor);
+  }
+}
+
 function initCharts() {
   createChart("2324uResChart", "https://docs.google.com/spreadsheets/d/1kccrFJIMqa07EfZEFPi4obVsTSS6wp-UuKxbihcfwvc/edit?usp=sharing");
+  createChart("2324uNonresChart", "https://docs.google.com/spreadsheets/d/1ES4vP4YhGP7g-A1MeS4kd4uujn5eoe6JzhfAC-a3Fek/edit#gid=0")
+  createChart("2324gResChart", "https://docs.google.com/spreadsheets/d/107BADicIfIDD6cJNeeZJnl6mAPkm6ncTnIyG5JeCbcU/edit#gid=0")
+  createChart("2324gNonresChart", "https://docs.google.com/spreadsheets/d/1IRg13R20UU_EglYtFXNfZdIKF2AFrqMopvKifFj-WgY/edit#gid=0")
 }
 
 function createChart(containerId, dataUrl) {
@@ -43,11 +68,11 @@ function handleQueryResponse(response, containerId) {
           series_data.push(0);
         }
       }
-
     }
     var dataset = {
 //      backgroundColor: colors[i],
 //      borderColor: colors[i],
+      borderWidth: 1,
       data: series_data
     }
 
@@ -60,7 +85,9 @@ function handleQueryResponse(response, containerId) {
     labels: labels,
     datasets: datasets
   };
+
   var canvas = document.getElementById(containerId);
+
   var setup = {
     type: 'doughnut',
     data: chartdata,
@@ -72,10 +99,18 @@ function handleQueryResponse(response, containerId) {
         },
         legend: {
           display: false
+        },
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              let finalString = Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(context.parsed);
+              return `${finalString}`;
+            }
+          }
         }
       },
-    }
+    },
+    plugins: [doughnutLabel]
   }
   chart = new Chart(canvas, setup);
-
 }

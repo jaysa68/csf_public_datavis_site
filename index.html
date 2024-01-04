@@ -12,6 +12,8 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <!-- script to pull data from google sheets-->
   <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <!-- loads all charts in tabcontents-->
+  <script src="scripts/charts.js"></script>
 </head>
 <body>
 
@@ -39,39 +41,21 @@ that student graduates. </p>
 </div>
 
 <div id="2024_25" class="tabcontent">
-  <div class="flex-container">
-    <div class = "overview-chart">
-      <canvas id="resident-undergrad"></canvas>
-      <script src="charts/resident-undergrad.js"></script>
-    </div>
-    <div class = "overview-chart">
-      <canvas id="nonresident-undergrad"></canvas>
-      <script src="charts/nonresident-undergrad.js"></script>
-    </div>
-    <div class = "overview-chart">
-      <canvas id="resident-grad"></canvas>
-      <script src="charts/resident-grad.js"></script>
-    </div>
-    <div class = "overview-chart">
-      <canvas id="nonresident-grad"></canvas>
-      <script src="charts/nonresident-grad.js"></script>
-    </div>
-  </div>
 </div>
 <div id="2023_24" class="tabcontent">
   <div class="flex-container">
     <div class="overview-chart">
-      <script src="scripts/2324-u-res.js"></script>
       <canvas id="2324uResChart"></canvas>
     </div>
-    <!--div class = "overview-chart">
-      <script src="scripts/2324-g-res.js"></script>
+    <div class="overview-chart">
+      <canvas id="2324uNonresChart"></canvas>
+    </div>
+    <div class = "overview-chart">
       <canvas id="2324gResChart"></canvas>
     </div>
     <div class = "overview-chart">
-      <script src="scripts/2324-g-nonres.js"></script>
       <canvas id="2324gNonresChart"></canvas>
-    </div-->
+    </div>
   </div>
 </div>
 <div id="2022_23" class="tabcontent">
