@@ -3,6 +3,9 @@ google.charts.load('current', {
 });
 google.charts.setOnLoadCallback(initCharts);
 
+//set global default font
+Chart.defaults.font.family = "'ReadexPro'"
+
 const doughnutLabel = {
   id: 'doughnutLabel',
   beforeDatasetsDraw(chart, args, pluginOptions) {
@@ -11,13 +14,16 @@ const doughnutLabel = {
     ctx.save();
     const xCoor = chart.getDatasetMeta(0).data[0].x;
     const yCoor = chart.getDatasetMeta(0).data[0].y;
+
+    const size = Math.round(chart.chartArea.width / 14); 
     
     let theSum = 0;
     for (var i = 0; i < data.datasets[0].data.length; i++)
       theSum += data.datasets[0].data[i];
     let finalString = Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(theSum);
 
-    ctx.font = 'bold 28px sans-serif';
+
+    ctx.font = 'bold ' + size + 'px ReadexPro';
     ctx.fillStyle = 'rgba(54, 162, 235, 1)';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
