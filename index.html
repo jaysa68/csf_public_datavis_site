@@ -13,7 +13,7 @@
   <!-- script to pull data from google sheets-->
   <script src="https://www.gstatic.com/charts/loader.js"></script>
   <!-- loads all charts in tabcontents-->
-  <script src="scripts/charts.js"></script>
+  <script src="scripts/overview-charts.js"></script>
 </head>
 <body>
 
@@ -33,14 +33,17 @@ that student graduates. </p>
 
 <!-- TODO put word "core fees" in color matching Tuition and SSF in later section -->
 
-<div class="tab">
+<div class="dropdown">
   <!--button class="tablinks" onclick="display_AY(event, '2024_25')" > 2024-25 </button-->
-  <button class="tablinks" onclick="display_AY(event, '2023_24')" id="defaultOpen"> 2023-24 </button>
-  <button class="tablinks" onclick="display_AY(event, '2022_23')"> 2022-23 </button>
-  <button class="tablinks" onclick="display_AY(event, '2021_22')"> 2021-22 or earlier</button>
+  <p id="year-label">2023-24 <i class="arrow"></i></p>
+  <div class="dropdown-content">
+    <button class="tablinks" onclick="display_AY(event, '2023-24')" id="defaultOpen"> 2023-24 </button>
+    <button class="tablinks" onclick="display_AY(event, '2022-23')"> 2022-23 </button>
+    <button class="tablinks" onclick="display_AY(event, '2021-22')"> 2021-22 </button>
+  </div>
 </div>
 
-<div id="2023_24" class="tabcontent">
+<div id="2023-24" class="tabcontent">
   <div class="flex-container">
     <div class="overview-chart">
       <canvas id="2324uResChart"></canvas>
@@ -56,7 +59,7 @@ that student graduates. </p>
     </div>
   </div>
 </div>
-<div id="2022_23" class="tabcontent">
+<div id="2022-23" class="tabcontent">
   <div class="flex-container">
     <div class="overview-chart">
       <canvas id="2223uResChart"></canvas>
@@ -72,7 +75,7 @@ that student graduates. </p>
     </div>
   </div>
 </div>
-<div id="2021_22" class="tabcontent">
+<div id="2021-22" class="tabcontent">
   <div class="flex-container">
     <div class="overview-chart">
       <canvas id="2122uResChart"></canvas>
@@ -89,65 +92,81 @@ that student graduates. </p>
   </div>
 </div>
 
-<div class="half-container">
-<h1>Tuition</h1>
+<div class="grid-container">
+  <div class="grid-item">
+    <h1>Tuition</h1>
+    <p> Tuition pays for the core services provided by UC Berkeley to its students.
+    According to <a
+    href="https://regents.universityofcalifornia.edu/governance/policies/3101.html">Regents
+    Policy 3101</a>, it can be used to cover most costs within the university
+    budget. This includes areas such as faculty salaries and benefits, building
+    maintenance, libraries, and some student financial aid. Graduate and
+    undergraduate students are charged different amounts for tuition. Nonetheless,
+    these costs are standardized across all universities that are part of the UC
+    system.</p>
 
-<p> Tuition pays for the core services provided by UC Berkeley to its students.
-According to <a
-href="https://regents.universityofcalifornia.edu/governance/policies/3101.html">Regents
-Policy 3101</a>, it can be used to cover most costs within the university
-budget. This includes areas such as faculty salaries and benefits, building
-maintenance, libraries, and some student financial aid. Graduate and
-undergraduate students are charged different amounts for tuition. Nonetheless,
-these costs are standardized across all universities that are part of the UC
-system.</p>
+    <h2>Nonresident Supplemental Tuition</h2>
+    <p>In addition to the standard tuition, students who have not established
+    California residency must also pay nonresident supplemental tuition. This
+    amount differs between graduate and undergraduate students. More information on determining residency may be found on the <a href="https://www.ucop.edu/residency/process.html">UCOP website</a>.</p>
 
-<h2>Nonresident Supplemental Tuition</h2>
+    <h2>Professional Degree Supplemental Tuition</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+    culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
 
-In addition to the standard tuition, students who have not established
-California residency must also pay nonresident supplemental tuition. This
-amount differs between graduate and undergraduate students. More information on determining residency may be found on the <a href="https://www.ucop.edu/residency/process.html">UCOP website</a>.
+  <div class="grid-item">
+    <h1>Student Services Fee (SSF)</h1>
+    <p> Like tuition, the SSF is standardized across all UC campuses. However,
+    the revenue from this fee </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+    culpa qui officia deserunt mollit anim id est laborum.</p>
+    <h1>Campus Fees</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+    culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
 
-<h2>Professional Degree Supplemental Tuition</h2>
+  <div class="grid-item">
+    <h1>Instructional Resilience & Enhancement Fee (IREF)</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+    culpa qui officia deserunt mollit anim id est laborum.</p>
+    <h1>Class Pass Fee</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+    culpa qui officia deserunt mollit anim id est laborum.</p>
+    <h1>Optional Fees</h1>
+    <p> These fees are not included in the charts above.
 
-</div>
+    <h2>Berkeley Student Health Insurance Plan (SHIP)</h2>
+    <p>SHIP provides comprehensive medical, dental, and vision coverage which is outlined on the <a href="https://uhs.berkeley.edu/insurance-ship/ship-benefits">University Health Services website</a>. All eligible UC Berkeley students are automatically enrolled in SHIP each academic year. Students who do not want SHIP must <a href="https://uhs.berkeley.edu/insurance-ship/waiving-ship">submit a waiver</a> by the deadline for the semester.</p>
 
-<div class="half-container">
-<h1>Student Services Fee (SSF)</h1>
-
-  <p> Like tuition, the SSF is standardized across all UC campuses. However,
-  the revenue from this fee </p>
-
-</div>
-
-<div class="half-container">
-  <h1>Campus Fees</h1>
-</div>
-
-<div class="half-container">
-  <h1>Instructional Resilience & Enhancement Fee (IREF)</h1>
-</div>
-
-<div class="half-container">
-  <h1>Class Pass Fee</h1>
-</div>
-
-<div class="half-container">
-  <h1>Optional Fees</h1>
-
-  <p> These fees are not included in the charts above.
-
-  <h2>Berkeley Student Health Insurance Plan (SHIP)</h2>
-
-  <p>SHIP provides comprehensive medical, dental, and vision coverage which is
-  outlined on the <a
-  href="https://uhs.berkeley.edu/insurance-ship/ship-benefits">University
-Health Services website</a>. All eligible UC Berkeley students are
-automatically enrolled in SHIP each academic year. Students who do not want
-SHIP must <a href="https://uhs.berkeley.edu/insurance-ship/waiving-ship">submit a waiver</a> by the deadline for the semester.</p>
-
-  <h2>Course Materials and Services Fees</h2>
-
+    <h2>Course Materials and Services Fees</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+    culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
 </div>
 
 <script src="scripts/tabs.js"></script>

@@ -14,6 +14,9 @@ function display_AY(evt, ayYear) {
 
   document.getElementById(ayYear).style.display = "block";
   evt.currentTarget.className += "-active";
+  
+  // change year label on dropdown
+  document.getElementById("year-label").innerHTML = ayYear + ' <i class="arrow"></i>';
 }
 
 document.getElementById("defaultOpen").click();

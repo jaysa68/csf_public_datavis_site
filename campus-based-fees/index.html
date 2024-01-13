@@ -1,12 +1,19 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../mystyle.css">
+  <!-- title in tab bar-->
   <title>Dataviz</title>
-  <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+  <!-- icon in tab bar-->
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <!-- chart.js library-->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- script to pull data from google sheets-->
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <!-- loads all charts in tabcontents-->
+  <script src="../scripts/campus-breakdown-chart.js"></script>
 </head>
 <body>
 
@@ -17,29 +24,99 @@
   <li class=active><a class=navtext href="../campus-based-fees">Campus-Based Fees</a></li>
 </ul>
 
-<div class = "left-half">
-  <canvas id="campus-based"></canvas>
-  <script src="campus-based-fees.js"></script>
+<div class="flex-container">
+  <div class = "half-chart">
+    <canvas id="campus-based"></canvas>
+  </div>
+  <div>
+    <h3><span>$306.00</span> Lower Sproul Plaza Fee</h3>
+    <h3><span>$212.75</span> Wellness Fee</h3>
+    <h3><span>$92.75</span> Campus Health Care Fee</h3>
+    <h3><span>$46.00</span> Life Safety Fee</h3>
+    <h3><span>$34.00</span> Associated Students of University of California (ASUC) Fee</h3>
+    <h3><span>$33.00</span> Campus Climate & Equity (Big C) Fee</h3>
+    <h3><span>$28.75</span> Recruitment and Retention (STARR) Fee</h3>
+    <h3><span>$20.75</span> Educational Opportunity & Equity (GOLD) Fee</h3>
+    <h3><span>$17.25</span> Student Basic Needs Fee</h3>
+    <h3><span>$10.00</span> The Green Initiative Fund (TGIF) Fee</h3>
+    <h3><span>$6.00</span> Student Center Fee</h3>
+    <h3><span>$6.00</span> Save the Daily Cal Initiative (V.O.I.C.E.) Fee</h3>
+    <h3><span>$4.50</span> Housing Security Fee</h3>
+    <h3><span>$2.25</span> Ethnic Studies Fee</h3>
+    <p>Data from the <a href = "https://registrar.berkeley.edu/tuition-fees-residency/tuition-fees/">Office of the Registrar</a></p>
+  </div>
 </div>
-<div class = "right-half">
-        <h3><span>$306.00</span> Lower Sproul Plaza Fee</h3>
-  <h3><span>$212.75</span> Wellness Fee</h3>
-  <h3><span>$92.75</span> Campus Health Care Fee</h3>
-  <h3><span>$46.00</span> Life Safety Fee</h3>
-  <h3><span>$34.00</span> Associated Students of University of California (ASUC) Fee</h3>
-  <h3><span>$33.00</span> Campus Climate & Equity (Big C) Fee</h3>
-  <h3><span>$28.75</span> Recruitment and Retention (STARR) Fee</h3>
-  <h3><span>$20.75</span> Educational Opportunity & Equity (GOLD) Fee</h3>
-  <h3><span>$17.25</span> Student Basic Needs Fee</h3>
-  <h3><span>$10.00</span> The Green Initiative Fund (TGIF) Fee</h3>
-  <h3><span>$6.00</span> Student Center Fee</h3>
-  <h3><span>$6.00</span> Save the Daily Cal Initiative (V.O.I.C.E.) Fee</h3>
-  <h3><span>$4.50</span> Housing Security Fee</h3>
-  <h3><span>$2.25</span> Ethnic Studies Fee</h3>
+<div class="grid-container">
+  <div class="grid-item">
+  <h1>Lower Sproul Plaza Fee</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
 
-  <p>Data from the <a href = "https://registrar.berkeley.edu/tuition-fees-residency/tuition-fees/">Office of the Registrar</a></p>
+  <div class="grid-item">
+  <h1>Wellness Fee</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+
+  <div class="grid-item">
+  <h1>Campus Health Care Fee</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+
+  <div class="grid-item">
+  <h1>Life Safety Fee</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+
+  <div class="grid-item">
+  <h1>Associated Students of University of California (ASUC) Fee</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+
+  <div class="grid-item">
+  <h1>Campus Climate & Equity (Big C) Fee</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+
+  <div class="grid-item">
+  <h1>Recruitment and Retention (STARR) Fee</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+
+  <div class="grid-item">
+  <h1>Educational Opportunity & Equity (GOLD) Fee</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+
+  <div class="grid-item">
+  <h1>Student Basic Needs Fee</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+
+  <div class="grid-item">
+  <h1>The Green Initiative Fund (TGIF) Fee</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+
+  <div class="grid-item">
+  <h1>Student Center Fee</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+
+  <div class="grid-item">
+  <h1>Save the Daily Cal Initiative (V.O.I.C.E.) Fee</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+
+  <div class="grid-item">
+  <h1>Housing Security Fee</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+
+  <div class="grid-item">
+  <h1>Ethnic Studies Fee</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
 </div>
 
 </body>
 </html> 
-<!DOCTYPE html>

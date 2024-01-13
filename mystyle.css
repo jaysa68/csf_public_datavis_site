@@ -4,8 +4,6 @@
 } 
 
 html, body {
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   background-color: #f7f6f5;
   /* set font for entire site */
   font-family: "ReadexPro";
@@ -69,18 +67,89 @@ span {
 .flex-container {
   display: flex;
   justify-content: space-evenly;
-  align-content: center;
   flex-wrap: wrap;
-  flex: 100%;
 }
 
-
 .overview-chart {
+  display: flex;
   flex: 25%;
   max-width: 25%;
   align-content: center;
-  display: flex;
   justify-content: center;
+}
+
+.half-chart {
+  flex: 40%;
+  max-width: 40%;
+  padding: 5px;
+}
+
+.arrow{
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-left: 5px;
+  margin-bottom: 2px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.dropdown {
+  display: inline-block;
+  border-color: #e7e7e7;
+  background-color: #f3f3f3;
+  cursor: default;
+  width: 95px;
+  margin-left: 6px;
+}
+
+.dropdown p {
+  margin: 0px;
+  padding: 8px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+}
+
+.dropdown button {
+  display: block;
+  border: none;
+  width: 95px;
+  text-align: left;
+  background-color: #f3f3f3;
+  font-size: 16px;
+  font-family: "ReadexPro";
+  padding: 8px;
+  cursor: pointer;
+}
+
+.dropdown button:hover {
+  color: #000;
+  background-color: #ccc;
+  border-color: #36a2eb;
+}
+
+p.alert {
+  border-left: 6px solid #36a2eb;
+  padding: 6px;
+  background-color: #ddffff;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+
+.grid-item {
+  padding: 20px;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -88,6 +157,9 @@ span {
   .overview-chart {
     flex: 50%;
     max-width: 50%;
+  }
+  .grid-container {
+    grid-template-columns: auto auto;
   }
 }
 
@@ -97,25 +169,7 @@ span {
     flex: 100%;
     max-width: 100%;
   }
-}
-
-.half-chart {
-  width: 45%;
-  height: auto;
-}
-
-.tab {
-  border: 1px solid #e7e7e7;
-}
-
-.half-container {
-  float: left;
-  width: 46%;
-  padding: 2%;
-}
-
-p.alert {
-  border-left: 6px solid #2196F3;
-  padding: 6px;
-  background-color: #ddffff;
+  .grid-container {
+    grid-template-columns: auto;
+  }
 }
