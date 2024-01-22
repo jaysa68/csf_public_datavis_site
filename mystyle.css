@@ -97,11 +97,13 @@ span {
 
 .dropdown {
   display: inline-block;
-  border-color: #e7e7e7;
   background-color: #f3f3f3;
   cursor: default;
   width: 95px;
   margin-left: 6px;
+  border: solid;
+  border-width: 2px;
+  border-color: #666;
 }
 
 .dropdown p {
@@ -114,8 +116,15 @@ span {
 }
 
 .dropdown-content {
+  border: solid;
+  border-width: 2px;
+  border-top-width: 0px;
+  border-color: #666;
   display: none;
+/* what w3schools said to do */
   position: absolute;
+/* fix alignment with dropdown */
+  margin: -2px
 }
 
 .dropdown button {
