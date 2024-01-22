@@ -116,6 +116,8 @@ function handleQueryResponse(response, containerId) {
     type: 'doughnut',
     data: chartdata,
     options: {
+      animation: {
+      },
       plugins: {
         title: {
           display: true,

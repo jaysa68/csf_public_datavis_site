@@ -173,3 +173,12 @@ p.alert {
     grid-template-columns: auto;
   }
 }
+
+.desc-link, .desc-link:visited {
+  text-decoration: none;
+  color: #2c9ae6;
+}
+.desc-link:hover {
+  text-decoration: underline;
+  color: #236999;
+}
