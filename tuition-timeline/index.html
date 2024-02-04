@@ -7,6 +7,8 @@
   <title>Dataviz</title>
   <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="buttons.js"></script>
 </head>
 <body>
 
@@ -17,9 +19,36 @@
   <li class=navbutton><a class=navtext href="../campus-based-fees">Campus-Based Fees</a></li>
 </ul>
 
-<div class="flex-container" style="max-height: 90vh; min-height: 90vh">
-  <canvas id="tuitionTimeline"></canvas>
-  <script src="tuitionTimeline.js"></script>
+<div class="dropdown" style="position: absolute; margin-top: 5px; width: 100px;">
+  <!--button class="tablinks" onclick="display_AY(event, '2024_25')" > 2024-25 </button-->
+  <p id="year-label">Nominal <i class="arrow"></i></p>
+  <div class="dropdown-content">
+    <button class="tablinks" onclick="display_AY(event, 'Nominal')" id="defaultOpen"> Nominal </button>
+    <button class="tablinks" onclick="display_AY(event, 'Inflation-Adjusted')"> Inflation-Adjusted </button>
+  </div>
+</div>
+
+<div class="dropdown" style="position: absolute; left: 110px; margin-top: 5px; width: 100px;">
+  <!--button class="tablinks" onclick="display_AY(event, '2024_25')" > 2024-25 </button-->
+  <p id="year-label">In-State <i class="arrow"></i></p>
+  <div class="dropdown-content">
+    <button class="tablinks" onclick="display_AY(event, '2023-24')" id="defaultOpen"> In-State </button>
+    <button class="tablinks" onclick="display_AY(event, '2022-23')"> Out-of-State </button>
+  </div>
+</div>
+
+<div class="flex-container" style="margin: auto; max-width: 180vh"> 
+  <script src="COAcharts.js"></script> 
+  <canvas id="nominal-in-state"></canvas>
+  <canvas id="nominal-out-of-state"></canvas>
+  <canvas id="real-in-state"></canvas>
+  <canvas id="real-out-of-state"></canvas>
+</div>
+
+<div>
+<p> This data only includes tuition and the student services fee. In these graphs,
+out of state tuition is the sum of supplemental tuition and base tuition.
+In-state students pay base tuition only. </p>
 </div>
 
 </body>
